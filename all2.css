@@ -55,7 +55,7 @@ body{
 }
 
 .header{
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
     display:flex;
     justify-content: center;
@@ -80,15 +80,36 @@ body{
 /* banner1 */
 
 .banner1{
-    width: 100%;
+    max-width: 100%;
     display: flex;
 }
 
 .banner1 img{
+    max-width: 100%;
     width: 50%;
+    display: block;
+}
+
+.banner1 .mobile{
+    display: none;
+}
+
+@media(max-width: 767px){
+    .banner1{
+        flex-direction: column;
+    }
+    .banner1 img{
+        display: none;
+    }
+    .banner1 .mobile{
+        display: block;
+        width: 100%;
+    }
 }
 
 .style1{
+    box-sizing: border-box;
+    max-width: 100%;
     width: 50%;
     background-image: url(img/HeroSection2.png);
     color: #0027D5;
@@ -109,11 +130,18 @@ body{
     font-size: 28px;
 }
 
-/* @media(max-width: 767px){
-    寫到這邊
-} */
+@media(max-width: 767px){
+    .style1{
+        width: 98%;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
 
-
+    .style1 h1{
+        font-size: 52px;
+        padding-bottom: 12px;
+    }
+}
 
 
 /* banner2 */
@@ -126,6 +154,27 @@ body{
 .banner2 img{
     width: 50%;
 }
+
+.banner2 .mobile2{
+    display: none;
+}
+
+@media(max-width: 767px){
+    .banner2{
+        flex-direction: column;
+    }
+
+    .banner2 img{
+        display: none;
+    }
+
+    .banner2 .mobile2{
+        display: block;
+        width: 100%;
+    }
+
+}
+
 
 .style2{
     width: 50%;
@@ -193,10 +242,26 @@ body{
 }
 
 
+@media(max-width: 767px){
+    .style2{
+        box-sizing: border-box;
+        width: 98%;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid #6c757D;
+    }
+
+    .style2 p{
+        width: 95%;
+    }
+}
+
 /* --- */
 
 .container{
-    max-width: 67.5vw;
+    max-width: 67.5%;
     margin: 0 auto;
     padding-top: 80px;
     /* border: 5px solid black; */
@@ -206,7 +271,8 @@ body{
 .search-bar{
     display: flex;
     align-items: center;
-    width: 416px;
+    max-width: 416px;
+    width: 100%;
     height: 56px;
     border: 1px solid #4b4b4b;
     border-radius: 40px;
@@ -222,6 +288,20 @@ body{
     padding-left: 10px;
 }
 
+@media(max-width: 767px){
+
+    .container{
+        max-width: 95%;
+        padding-top: 64px;
+    }
+    
+    .search-bar{
+        width: 95%;
+        box-sizing: border-box;
+        margin-right: 12px;
+    } 
+}
+
 /* 9宮格小卡↓ */
 .wrap{
     /* border: 5px solid black; */
@@ -229,12 +309,19 @@ body{
 
 .content {
     display: inline-block;
-    width: 416px;
+    width: 100%;
+    max-width: 416px;
     box-sizing: border-box;
     padding-right: 12px;
     padding-left: 12px;
     margin-bottom: 40px;
     margin-top: 40px;
+}
+
+@media(max-width: 767px){
+    .content{
+        width: 95%;
+    }
 }
 
 .content img{
@@ -303,26 +390,6 @@ body{
 }
 
 
-@media(max-width: 767px){
-    .container{
-        max-width: 98vw;
-        padding-top: 64px;
-        margin-right: 12px;
-        margin-left: 12px;
-        /* border: 5px solid black; */
-    }
-
-    .search-bar{
-        width: 90vw;
-    }
-
-    .content {
-        width: 95vw;
-        padding-right: 0px;
-    }
-}
-
-
 .pagination{
     display: flex;
     justify-content: center;
@@ -368,7 +435,7 @@ body{
 
 .footer1 p{
     display: block;
-    width: 53vw;
+    width: 53%;
     font-weight: 500;
     font-size: 32px;
     color: #000;
@@ -378,6 +445,12 @@ body{
     color: white;
 }
 
+@media(max-width: 767px){
+    .footer1{
+        display: none;
+    }
+}
+
 .footer2{
     text-align: center;
     padding-top: 24px;
@@ -385,4 +458,7 @@ body{
     font-size: 16px;
     font-weight: 500;
 }
+
+
+
      
