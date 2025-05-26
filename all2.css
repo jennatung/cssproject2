@@ -109,7 +109,6 @@ body{
 
 .style1{
     box-sizing: border-box;
-    max-width: 100%;
     width: 50%;
     background-image: url(img/HeroSection2.png);
     color: #0027D5;
@@ -132,9 +131,10 @@ body{
 
 @media(max-width: 767px){
     .style1{
-        width: 98%;
+        width: 100%;
         padding-top: 24px;
         padding-bottom: 24px;
+        padding-left: 24px;
     }
 
     .style1 h1{
